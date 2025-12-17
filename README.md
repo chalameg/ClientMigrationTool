@@ -2,9 +2,7 @@
 
 A simple full-stack app that helps migrate clients from a legacy system to a new one. Built with Spring Boot and Vue.js to demonstrate clean architecture and modern development practices.
 
-## What's This About?
-
-This is a take-home assignment that shows how to build a well-structured migration tool. The backend is a Spring Boot API with in-memory storage, and the frontend is a Vue.js app with Vuetify for a clean UI. No databases or complex setup required—just clone and run.
+The backend is a Spring Boot API with in-memory storage, and the frontend is a Vue.js app with Vuetify for a clean UI. No databases or complex setup required—just clone and run.
 
 ## Tech Stack
 
@@ -57,6 +55,9 @@ I went with a classic layered architecture because it keeps things organized and
 
 ```
 inpartMigrationTool/
+├── start.sh              # Startup script (Linux/Mac)
+├── start.bat             # Startup script (Windows)
+├── stop.sh               # Stop script (Linux/Mac)
 ├── backend/
 │   ├── src/main/java/com/inpart/migration/
 │   │   ├── domain/Client.java
@@ -93,6 +94,27 @@ inpartMigrationTool/
 - Java 17+
 - Node.js 18+
 - Maven (or use the wrapper)
+
+### Quick Start (Recommended)
+
+**Run both servers with one command:**
+
+```bash
+# On Linux/Mac
+./start.sh
+
+# On Windows
+start.bat
+```
+
+This automatically starts both backend and frontend servers. Press `Ctrl+C` to stop (Linux/Mac) or close the terminal windows (Windows).
+
+**To stop servers manually (Linux/Mac):**
+```bash
+./stop.sh
+```
+
+### Manual Start
 
 **Running the Backend:**
 
